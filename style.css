@@ -1,0 +1,211 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+  --black: #202020;
+  --white: #f0f0f0;
+  --orange: #ff8533;
+  --blue: #4a89bf;
+  --bird-blue: #6288b9;
+  --green: #688b58;
+  --sidebar-selected: var(--blue);
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fragment Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fragment-mono-v4-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Spline Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/spline-sans-mono-v10-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  margin: 0;
+  min-height:100vh;
+  background-color: var(--black); 
+  color: var(--white);
+  font-family: 'Fragment Mono';
+  
+  display:flex; 
+  flex-direction:row; 
+  height:100vh;
+}
+
+a {
+  color: #ff8533;
+}
+
+img {
+  border: none;
+  image-rendering: pixelated;
+}
+
+.orange {
+  color: var(--orange); 
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green); 
+}
+
+.bird-blue {
+  color: var(--bird-blue); 
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); 
+}
+
+.sidenav {
+  position: fixed;
+  height: 100%;
+  background:var(--white);
+  font-size:2rem;
+  padding-top:0.5rem;
+}
+
+.sidenav a {
+  display: block;
+  color:var(--black);
+  text-decoration: none;
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+}
+
+.content {
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+
+.posters {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 1rem;
+  gap: 1rem;
+}
+
+.center-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 4rem 0;
+  gap: 4rem;
+}
+
+.center-photo {  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.photo-slideshow-container {  
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.arrow {
+  border-radius: 0.25rem;
+  padding: 1rem;  
+  font-size: 2rem;
+  user-select: none;
+}
+
+.arrow:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.return {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.return:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.visual-toggle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  bottom: 0;
+}
+
+.visual-toggle:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+
+.centered-photo {
+  padding: 1rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.enter {
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.enter:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.enter-bw {
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.enter-bw:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.complete-center {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
